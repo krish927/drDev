@@ -1,0 +1,277 @@
+<ng-container *ngIf="!languageSelected">
+    <div class="section"style="background: #DCE9E2; height: 100vh">
+        <div class="container" >
+            <div class="row">
+                <div style="display: flex; justify-content:space-between; align-items:center">
+                    <a class="navbar-brand" href="#">
+                        drDev
+                      </a>
+                    <button class="whatsapp-btn"><img src="assets/images/whatsapp.svg"><span><a style="color: #ffffff; text-decoration: none;" href=" https://wa.me/918745061141?text=Hello%20doctor%20I%20want%20to%20book%20appointment!!!" target="_blank">schedule your appointment</a></span></button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content">
+                    <div class="title">
+                        <h4>Please select a language</h4>
+                        <p>कृपया किसी भाषा का चयन करें</p>
+                    </div>
+                    <div class="select-lang">
+                        <button (click)="english()">English</button>
+                        <button (click)="hindi()">Hindi</button>
+                    </div>
+                </div>
+            </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <div class="right-side">
+                        <img src="assets/images/head-image.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+          </div>
+        </div>
+</ng-container>
+<ng-container *ngIf="languageSelected">
+    <div class="container-fluid" style="background: #dce9e2;">
+<div class="container">
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          {{lang_hindi? hindi_content[0].logo : english_content[0].logo }}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto mb-2 mb-lg-0" style="width: 30%; justify-content: space-between;">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">{{lang_hindi? hindi_content[0].start : english_content[0].start }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{lang_hindi? hindi_content[0].about : english_content[0].about }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{lang_hindi? hindi_content[0].services : english_content[0].services }}</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">{{lang_hindi? hindi_content[0].contactUs : english_content[0].contactUs }}</a>
+            </li>
+          </ul>
+            <button style="font-style: normal;
+            font-weight: 700;
+            border: 1px solid #00856F;
+            border-radius: 40px;
+            background: none;
+            font-size: 14px;
+            line-height: 18px;
+            text-transform: uppercase;
+            padding: 7px 20px;
+            /* Primary Colors/brand-green */"
+             href="https://wa.me/918745061141" ><a style="color: #00856F; text-decoration: none;" href=" https://wa.me/918745061141?text=Hello%20doctor%20I%20want%20to%20book%20appointment!!!" target="_blank">{{lang_hindi? hindi_content[0].appointment : english_content[0].appointment}}</a></button>
+        </div>
+      </div>
+    </nav>
+    </div>
+</div>
+  <section class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6" style="align-self: center;">
+            <div class="header-content">
+              <h6>{{lang_hindi? hindi_content[1].welcome : english_content[1].welcome}}</h6>
+              <h1>{{lang_hindi? hindi_content[1].headHeading : english_content[1].headHeading}}</h1>
+              <p>{{lang_hindi? hindi_content[1].headDescription : english_content[1].headDescription}}</p>
+              <button class="whatsapp-btn"><img src="assets/images/whatsapp.svg"><span><a style="color: #ffffff; text-decoration: none;" href=" https://wa.me/918745061141?text=Hello%20doctor%20I%20want%20to%20book%20appointment!!!" target="_blank">{{lang_hindi? hindi_content[6].whatsapp : english_content[6].whatsapp}}</a></span></button>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5">
+            <img src="assets/images/head-image.png">
+          </div>
+        </div>
+      </div>
+      <div class="container" style="position: relative;">
+        <div class="row" style="justify-content: center; background: #FFFAF1; padding-block: 5%; border-radius: 6px; width: 100%; position: absolute;">
+          <div class="col-md-4">
+            <div class="stat-container">
+              <h1>{{counter1}}+</h1>
+              <p>{{lang_hindi? hindi_content[2].stats1?.title : english_content[2].stats1?.title}}</p>
+            </div>
+          </div>
+          <div class="col-md-4" style="border-left: 2px solid #00856F; border-right: 2px solid #00856F;">
+            <div class="stat-container">
+              <h1>{{counter2}}+</h1>
+              <p>{{lang_hindi? hindi_content[2].stats2?.title : english_content[2].stats2?.title}}</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="stat-container">
+              <h1>{{counter3}}+</h1>
+              <p>{{lang_hindi? hindi_content[2].stats3?.title : english_content[2].stats3?.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <div class="container">
+        <div class="row">
+          <div class="section-heading">
+            <h6>{{lang_hindi? hindi_content[3].servicesHead : english_content[3].servicesHead}}</h6>
+          </div>
+          <div class="section-sub-heading">
+            <h1>{{lang_hindi? hindi_content[3].servicesHeading : english_content[3].servicesHeading}}</h1>
+          </div>
+          </div>
+          <div class="row" style="margin-bottom: 25px;">
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service1?.title : english_content[3].service1?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service1?.shortDescription : english_content[3].service1?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service2?.title : english_content[3].service2?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service2?.shortDescription : english_content[3].service2?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service3?.title : english_content[3].service3?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service3?.shortDescription : english_content[3].service3?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service4?.title : english_content[3].service4?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service4?.shortDescription : english_content[3].service4?.shortDescription}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 25px;">
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service5?.title : english_content[3].service5?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service5?.shortDescription : english_content[3].service5?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service6?.title : english_content[3].service6?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service6?.shortDescription : english_content[3].service6?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service7?.title : english_content[3].service7?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service7?.shortDescription : english_content[3].service7?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service8?.title : english_content[3].service8?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service8?.shortDescription : english_content[3].service8?.shortDescription}}</p>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 25px;">
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service9?.title : english_content[3].service9?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service9?.shortDescription : english_content[3].service9?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service10?.title : english_content[3].service10?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service10?.shortDescription : english_content[3].service10?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service11?.title : english_content[3].service11?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service11?.shortDescription : english_content[3].service11?.shortDescription}}</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="service-container">
+                <img src="assets/images/tick.png">
+                <h4>{{lang_hindi? hindi_content[3].service12?.title : english_content[3].service12?.title}}</h4>
+                <p>{{lang_hindi? hindi_content[3].service12?.shortDescription : english_content[3].service12?.shortDescription}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="about-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="about-img">
+              <img src="assets/images/about.png">
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <div class="about-content">
+              <div class="section-heading">
+                <h6>{{lang_hindi? hindi_content[4].aboutHead : english_content[4].aboutHead}}</h6>
+              </div>
+              <div class="section-sub-heading">
+                <h1> {{lang_hindi? hindi_content[4].aboutHeading : english_content[4].aboutHeading}}</h1>
+              </div>
+              <div class="content">
+                <p>{{lang_hindi? hindi_content[4].description : english_content[4].description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="contact-content">
+              <div class="section-sub-heading">
+                <h1>{{lang_hindi? hindi_content[5].contactHeading : english_content[5].contactHeading}}</h1>
+              </div>
+              <div class="contact-details">
+                <div class="contact-link">
+                  <img src="assets/images/map.png">
+                  <p>{{lang_hindi? hindi_content[5].address : english_content[5].address}}</p>
+                </div>
+                <div class="contact-link">
+                  <img src="assets/images/mail.png">
+                  <p>{{lang_hindi? hindi_content[5].email : english_content[5].email}}</p>
+                </div>
+                <div>
+                    <button class="whatsapp-btn"><img src="assets/images/whatsapp.svg"><span><a style="color: #ffffff; text-decoration: none;" href=" https://wa.me/918745061141?text=Hello%20doctor%20I%20want%20to%20book%20appointment!!!" target="_blank">{{lang_hindi? hindi_content[6].whatsapp : english_content[6].whatsapp}}</a></span></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-6">
+            <div class="about-img">
+              <img src="assets/images/contact.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+</ng-container>
